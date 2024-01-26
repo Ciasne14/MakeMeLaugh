@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccrd1byjikhvv"]
+
+[ext_resource type="Script" path="res://Bullet.gd" id="1_wbceg"]
+[ext_resource type="Texture2D" uid="uid://dq70gru5dsgtw" path="res://Images/donkey.png" id="2_acgs6"]
+[ext_resource type="Texture2D" uid="uid://c48tfqy4fffii" path="res://Images/syringe.png" id="3_5lu52"]
+[ext_resource type="Texture2D" uid="uid://bw81psq5t76bj" path="res://Images/jar.png" id="4_2oo0v"]
+[ext_resource type="Texture2D" uid="uid://qs6y28m4ef1t" path="res://Images/cancer.png" id="5_tho26"]
+[ext_resource type="Texture2D" uid="uid://vfg7kiq584oe" path="res://Images/rock.png" id="6_284y8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gukd"]
+radius = 17.4642
+
+[node name="Bullet" type="Area2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_wbceg")
+
+[node name="Donkey" type="Sprite2D" parent="."]
+position = Vector2(-11, 0)
+scale = Vector2(0.0190493, 0.0190493)
+texture = ExtResource("2_acgs6")
+
+[node name="Syringe" type="Sprite2D" parent="."]
+position = Vector2(-5, -1.19209e-07)
+rotation = 1.20158
+scale = Vector2(0.0261213, 0.0261213)
+texture = ExtResource("3_5lu52")
+
+[node name="Jar" type="Sprite2D" parent="."]
+position = Vector2(-11, 0)
+rotation = 1.56411
+scale = Vector2(0.0914754, 0.105362)
+texture = ExtResource("4_2oo0v")
+
+[node name="Cancer" type="Sprite2D" parent="."]
+position = Vector2(-11, 0)
+scale = Vector2(0.0658121, 0.0658121)
+texture = ExtResource("5_tho26")
+
+[node name="Stone" type="Sprite2D" parent="."]
+position = Vector2(-11, 0)
+scale = Vector2(0.14195, 0.14195)
+texture = ExtResource("6_284y8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5gukd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

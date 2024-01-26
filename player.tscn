@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8rrkv0nv07ev"]
+
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_n44hs"]
+[ext_resource type="Script" path="res://player.gd" id="1_tnqij"]
+[ext_resource type="PackedScene" path="res://gun.tscn" id="3_8u8xm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7udc"]
+radius = 34.0588
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i35bx"]
+radius = 40.05
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vvkr"]
+bg_color = Color(0, 0.929412, 0.745098, 0.117647)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hs45"]
+bg_color = Color(0.298039, 0.980392, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(2, 5)
+script = ExtResource("1_tnqij")
+
+[node name="HappyBoo" parent="." instance=ExtResource("1_n44hs")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k7udc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Gun" parent="." instance=ExtResource("3_8u8xm")]
+position = Vector2(1, -38)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_i35bx")
+debug_color = Color(0.92549, 0.952941, 0.815686, 0.419608)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -272.0
+offset_top = -206.0
+offset_right = 271.0
+offset_bottom = -179.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3vvkr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7hs45")
+value = 100.0
+show_percentage = false
