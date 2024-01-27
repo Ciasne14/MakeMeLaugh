@@ -47,3 +47,5 @@ text = "
 Główne menu
  "
 script = ExtResource("3_f45q7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
