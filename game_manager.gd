@@ -6,13 +6,14 @@ signal word_used()
 signal word_collected(count: int)
 
 @onready var word_scene = preload("res://components/word.tscn")
+@onready var global_state: GlobalState = get_node("/root/GlobalStatee")
 
 var defined_words: Array = []
 var words: Dictionary = {}
-var words_limit: int = 20
+#var words_limit: int = 20
 var words_count: int = 0
 
-var list_of_words = ["to chuj", "twoja stara", "mam jeszcze z osłem", "odpalaj", "rucham ci matkę","puk puk", "słoik pęka","sekator","chłop się za babę przebrał","kabarety xD","wilki jakieś"]
+#var list_of_words = ["to chuj", "twoja stara", "mam jeszcze z osłem", "odpalaj", "rucham ci matkę","puk puk", "słoik pęka","sekator","chłop się za babę przebrał","kabarety xD","wilki jakieś","daj kamienia"]
 
 #func define_words():
 	#var examples = [
@@ -60,10 +61,19 @@ var list_of_words = ["to chuj", "twoja stara", "mam jeszcze z osłem", "odpalaj"
 func word_collect():
 	words_count += 1
 	word_collected.emit(words_count)
+	is_boss_ready()
 
 func get_defined_word() -> Word:
-	if randf_range(0, 10.0) < 10:
+	if global_state.words_to_collect.size() > 0 && randf_range(0, 10.0) < 10:
 		var word: Word = word_scene.instantiate()
-		word.set_text(list_of_words.pick_random())
+		var word_text: String = global_state.words_to_collect.pick_random()
+		word.set_text(word_text)
+		global_state.words_to_collect.remove_at(global_state.words_to_collect.find(word_text))
+		
 		return word
 	return null
+
+func is_boss_ready():
+	if words_count >= global_state.current_words.size():
+		get_tree().change_scene_to_file("res://boss_gameplay.tscn")
+	

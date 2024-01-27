@@ -19,6 +19,7 @@ var is_collected: bool
 func set_text(text: String):
 	var label: Label = get_node("Text")
 	label.text = text
+	%Collision.get_shape().size = label.size
 
 func use():
 	is_used = true
