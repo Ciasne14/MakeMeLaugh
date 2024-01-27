@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://du3o6p35tm06s"]
+
+[ext_resource type="Script" path="res://leaderboard/player_entry.gd" id="1_cfx40"]
+
+[sub_resource type="SystemFont" id="SystemFont_gnyfq"]
+
+[node name="PlayerEntry" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cfx40")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+
+[node name="PlayerName" type="Label" parent="HBoxContainer/ColorRect/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_gnyfq")
+theme_override_font_sizes/font_size = 25
+text = "Super Text"
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+
+[node name="Points" type="Label" parent="HBoxContainer/MarginContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "452"
+horizontal_alignment = 1
+vertical_alignment = 1

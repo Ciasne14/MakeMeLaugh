@@ -82,9 +82,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
+GlobalStatee="*res://global_state.gd"
 Game="*res://Global/game.gd"
 Utlis="*res://Global/Utlis.gd"
-GlobalStatee="*res://global_state.gd"
 
 [display]
 

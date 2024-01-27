@@ -17,6 +17,7 @@ var seconds_left: int = 300
 var collected_wrods: Array = []
 
 var points: int = 0
+var player_name: String = ""
 
 func _ready():
 	current_joke = jokes.pick_random()

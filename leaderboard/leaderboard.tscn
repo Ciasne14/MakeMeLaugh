@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://csuweru2q5tka"]
+
+[ext_resource type="Script" path="res://leaderboard/lootlocker.gd" id="1_47pdr"]
+[ext_resource type="Script" path="res://leaderboard/leaderboard.gd" id="1_jmbja"]
+
+[node name="Leaderboard" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jmbja")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="Records" type="VBoxContainer" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Ranking" type="MarginContainer" parent="CenterContainer/Records"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="CenterContainer/Records/Ranking"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ranking"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 30
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 30
+
+[node name="Button2" type="Button" parent="HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Menu Główne"
+
+[node name="LootLocker" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_47pdr")
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]
