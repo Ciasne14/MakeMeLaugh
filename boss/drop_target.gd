@@ -20,3 +20,6 @@ func _drop_data(position: Vector2, data) -> void:
 	%TargetContainer.add_child(draggable_copy)
 
 	item_dropped_on_target.emit(data)
+
+func word_clicked(word: DraggableWord) -> void:
+	_drop_data(Vector2(), word)

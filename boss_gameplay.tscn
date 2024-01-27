@@ -52,6 +52,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="DropWords" type="Panel" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("3_0abfq")

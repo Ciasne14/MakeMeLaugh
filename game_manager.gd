@@ -75,5 +75,6 @@ func get_defined_word() -> Word:
 
 func is_boss_ready():
 	if words_count >= global_state.current_words.size():
+		global_state.points += global_state.seconds_left
 		get_tree().change_scene_to_file("res://boss_gameplay.tscn")
 	

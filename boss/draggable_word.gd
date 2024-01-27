@@ -2,6 +2,8 @@ extends MarginContainer
 
 class_name DraggableWord
 
+signal word_clicked(instance: DraggableWord);
+
 var id: int
 var label: String
 
@@ -41,3 +43,8 @@ func _get_preview_control() -> Control:
 	preview.color = preview_color
 	preview.set_rotation(.1) # in readians
 	return preview
+
+
+func _on_gui_input(event: InputEvent):
+	if event.is_action_pressed("mouse_clicked"):
+		word_clicked.emit(self)

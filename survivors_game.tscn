@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8lkupff3isq1"]
+[gd_scene load_steps=7 format=3 uid="uid://b3caitg7qtuo5"]
 
 [ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
@@ -11,12 +11,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -101, -90, 0, 0, 0, 0, 2048, -96, 0, 0, 0, 0, 2066, 1122, 0, 0, 0, 0, -109, 1124, 0, 0, 0, 0, -101, -90)
 }
 point_count = 5
-
-[sub_resource type="LabelSettings" id="LabelSettings_hhcke"]
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_50tnj"]
-font_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -109,31 +103,34 @@ text = "Game Over"
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="WordsCollected" type="Label" parent="CanvasLayer2"]
-offset_left = 66.0
-offset_top = 945.0
-offset_right = 512.0
-offset_bottom = 1028.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -83.0
+offset_right = 446.0
+grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "Zebrane Słowa!"
 script = ExtResource("5_hq66n")
 
-[node name="Time" type="Label" parent="CanvasLayer2"]
+[node name="TimeLeftLabel" type="Label" parent="CanvasLayer2"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_right = 0.047
+anchor_bottom = 0.063
 offset_left = 1.0
 offset_top = 18.0
-offset_right = 82.0
-offset_bottom = 53.0
-text = "Time"
-label_settings = SubResource("LabelSettings_hhcke")
+offset_right = 227.76
+offset_bottom = 18.96
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Zostało: 300sec"
 
-[node name="Kills" type="Label" parent="CanvasLayer2"]
-offset_left = 9.0
-offset_top = 55.0
-offset_right = 77.0
-offset_bottom = 93.0
-text = "Kills"
-label_settings = SubResource("LabelSettings_50tnj")
+[node name="SecondsLeft" type="Timer" parent="."]
+autostart = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="word_collected" from="GameManager" to="CanvasLayer2/WordsCollected" method="_on_game_manager_word_collected"]
+[connection signal="timeout" from="SecondsLeft" to="." method="_on_seconds_left_timeout"]

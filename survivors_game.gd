@@ -1,6 +1,8 @@
 extends Node2D
 
 
+@onready var global_state: GlobalState = get_node("/root/GlobalStatee")
+
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
 	var new_braun = preload("res://mob_braun.tscn").instantiate()
@@ -21,3 +23,8 @@ func _on_timer_timeout():
 func _on_player_health_depleted():
 	%GameOver.visible = true
 	get_tree().paused = true
+
+
+func _on_seconds_left_timeout():
+	global_state.seconds_left -= 1
+	%TimeLeftLabel.text = "Zostało: " + str(global_state.seconds_left) + "sec"
