@@ -29,6 +29,6 @@ func collect():
 	game_manager.word_collect()
 
 func _on_area_2d_body_entered(body):
-	if body is Player:
+	if(body.name == "Player"):
 		collect()
 		queue_free()

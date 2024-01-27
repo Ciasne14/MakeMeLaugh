@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_n44hs"]
 [ext_resource type="Script" path="res://player.gd" id="1_tnqij"]
-[ext_resource type="PackedScene" path="res://gun.tscn" id="3_8u8xm"]
+[ext_resource type="PackedScene" uid="uid://dymmj6pcet2s1" path="res://gun.tscn" id="3_8u8xm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7udc"]
 radius = 34.0588
