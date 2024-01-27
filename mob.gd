@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 3
+var health = 1
 var wordToSpawn = preload("res://components/word.tscn")
 @onready var player = get_node("/root/Game/Player")
 
