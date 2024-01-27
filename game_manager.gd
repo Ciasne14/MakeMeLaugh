@@ -12,7 +12,7 @@ var words: Dictionary = {}
 var words_limit: int = 20
 var words_count: int = 0
 
-var list_of_words = ["to chuj", "twoja stara", "mam jeszcze z osłem", "odpalaj","masz raka kurwo", "rucham ci matkę","puk puk", "słoik pęka","sekator","chłop się za babę przebrał","kabarety xD","wilki jakieś"]
+var list_of_words = ["to chuj", "twoja stara", "mam jeszcze z osłem", "odpalaj", "rucham ci matkę","puk puk", "słoik pęka","sekator","chłop się za babę przebrał","kabarety xD","wilki jakieś"]
 
 #func define_words():
 	#var examples = [
