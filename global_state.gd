@@ -3,7 +3,9 @@ extends Node
 class_name GlobalState
 
 var jokes: Array = [
-	"""Dlaczego dzieci z Czarnobyla są mądre? Bo co dwie głowy to nie jedna."""
+	"""Dlaczego dzieci z Czarnobyla są mądre? Bo co dwie głowy to nie jedna.""",
+	"""Jak poznać prawdziwego programistę? Wiesza się razem ze swoim programem""",
+	"""Dlaczego Ania nie płakała jak spadła z roweru? Bo kierownica jej płuco przebiła."""
 ]
 
 var current_joke: String = ""
