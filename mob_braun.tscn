@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsejffnmdddiv"]
+
+[ext_resource type="Script" path="res://mob_braun.gd" id="1_dj45x"]
+[ext_resource type="PackedScene" uid="uid://lei2rmgi078n" path="res://characters/braun/braun.tscn" id="2_q4h7f"]
+[ext_resource type="Texture2D" uid="uid://he8rbu4b4r7b" path="res://characters/braun/fireex.png" id="3_4ihb0"]
+[ext_resource type="AudioStream" uid="uid://cwxluvml0853" path="res://characters/braun/szczesc bozze.mp3" id="4_cdujh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ngya6"]
+radius = 53.0848
+
+[node name="MobBraun" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_dj45x")
+
+[node name="Braun" parent="." instance=ExtResource("2_q4h7f")]
+unique_name_in_owner = true
+scale = Vector2(0.238438, 0.182099)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -36)
+shape = SubResource("CircleShape2D_ngya6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(25, 0)
+rotation = 1.15977
+scale = Vector2(0.206005, 0.263738)
+texture = ExtResource("3_4ihb0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cdujh")
+autoplay = true
+max_distance = 2004.0
+attenuation = 0.0291572

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwxluvml0853"
+path="res://.godot/imported/szczesc bozze.mp3-66f4574b08107433589b50d84615970a.mp3str"
+
+[deps]
+
+source_file="res://characters/braun/szczesc bozze.mp3"
+dest_files=["res://.godot/imported/szczesc bozze.mp3-66f4574b08107433589b50d84615970a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

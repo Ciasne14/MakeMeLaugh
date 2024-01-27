@@ -3,6 +3,11 @@ extends Node2D
 
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
+	var new_braun = preload("res://mob_braun.tscn").instantiate()
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = round(rng.randf_range(0, 10.0))
+	if(my_random_number>8):
+		new_mob = new_braun
 	%PathFollow2D.progress_ratio = randf()
 	new_mob.global_position = %PathFollow2D.global_position
 	

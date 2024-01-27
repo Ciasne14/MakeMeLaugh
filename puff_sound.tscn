@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dihtvmdnog7kq"]
+
+[ext_resource type="AudioStream" uid="uid://co0elpe52ewni" path="res://characters/braun/puff.mp3" id="1_56w5i"]
+
+[node name="Puff_sound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_56w5i")
+autoplay = true

@@ -1,0 +1,139 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8lkupff3isq1"]
+
+[ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
+[ext_resource type="PackedScene" path="res://pine_tree.tscn" id="2_o1svp"]
+[ext_resource type="Script" path="res://game_manager.gd" id="4_iy823"]
+[ext_resource type="Script" path="res://word_collected.gd" id="5_hq66n"]
+
+[sub_resource type="Curve2D" id="Curve2D_e7uqj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -101, -90, 0, 0, 0, 0, 2048, -96, 0, 0, 0, 0, 2066, 1122, 0, 0, 0, 0, -109, 1124, 0, 0, 0, 0, -101, -90)
+}
+point_count = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhcke"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_50tnj"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_nficl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 1935.0
+offset_bottom = 1089.0
+
+[node name="Player" parent="." instance=ExtResource("1_kwr4t")]
+position = Vector2(1043, 464)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-1043, -464)
+curve = SubResource("Curve2D_e7uqj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-101, -90)
+rotation = -0.00279199
+
+[node name="PineTree" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(363, 636)
+
+[node name="PineTree2" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(595, 219)
+
+[node name="PineTree3" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1306, 823)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1434, 267)
+
+[node name="PineTree5" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1503, 302)
+
+[node name="PineTree6" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1402, 369)
+
+[node name="PineTree7" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1669, 582)
+
+[node name="PineTree8" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(422, 577)
+
+[node name="PineTree9" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(433, 657)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="GameManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_iy823")
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.247059)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Game Over"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="WordsCollected" type="Label" parent="CanvasLayer2"]
+offset_left = 66.0
+offset_top = 945.0
+offset_right = 512.0
+offset_bottom = 1028.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Zebrane frazy: 0/"
+script = ExtResource("5_hq66n")
+
+[node name="Time" type="Label" parent="CanvasLayer2"]
+offset_left = 1.0
+offset_top = 18.0
+offset_right = 82.0
+offset_bottom = 53.0
+text = "Time"
+label_settings = SubResource("LabelSettings_hhcke")
+
+[node name="Kills" type="Label" parent="CanvasLayer2"]
+offset_left = 9.0
+offset_top = 55.0
+offset_right = 77.0
+offset_bottom = 93.0
+text = "Kills"
+label_settings = SubResource("LabelSettings_50tnj")
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="word_collected" from="GameManager" to="CanvasLayer2/WordsCollected" method="_on_game_manager_word_collected"]
