@@ -9,6 +9,7 @@ var matched_words: Array = []
 
 func _ready() -> void:
 	_populate_dragables()
+	$Points.text = "Punkty: " + str(global_state.points)
 
 func _populate_dragables():
 	var words_created: Array = []
@@ -43,6 +44,8 @@ func _on_drag_item_clicked(dropped_item: DraggableWord) -> void:
 		global_state.points += 20
 		_move_word(dropped_item)
 	print("Points", str(global_state.points))
+	$Points.text = "Punkty: " + str(global_state.points)
+	
 
 func _move_word(item: DraggableWord) -> void:
 	matched_words.push_back({
@@ -57,4 +60,5 @@ func _matched_all():
 		if word["id"] != initial_index:
 			print("Wrong word chuju!", word["label"], word["id"], " ", initial_index)
 		initial_index += 1
+	get_tree().change_scene_to_file("res://summary.tscn")
 	

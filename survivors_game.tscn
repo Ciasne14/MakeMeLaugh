@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3caitg7qtuo5"]
+[gd_scene load_steps=7 format=3 uid="uid://c8lkupff3isq1"]
 
 [ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]

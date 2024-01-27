@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://brxer44urqy0h"]
+
+[ext_resource type="Script" path="res://summary.gd" id="1_iamdf"]
+[ext_resource type="Script" path="res://NewGame.gd" id="2_6rv8q"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="3_f45q7"]
+
+[node name="Summary" type="PanelContainer"]
+offset_right = 1921.0
+offset_bottom = 1080.0
+size_flags_vertical = 4
+script = ExtResource("1_iamdf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "
+Gratulujemy, zakończyłeś niesamowitą, uwłaczającą, kontrowersyjną 
+przygodę w swoim życiu, przygodę, która doporawdziła do uzyskania:"
+
+[node name="Points" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Punkty: 100
+"
+
+[node name="NewGame" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "
+Mam jeszcze z osłem
+Odpalaj!
+(nowa gra)
+ "
+script = ExtResource("2_6rv8q")
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 50
+text = "
+Główne menu
+ "
+script = ExtResource("3_f45q7")
