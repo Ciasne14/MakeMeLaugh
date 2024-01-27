@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8lkupff3isq1"]
+[gd_scene load_steps=9 format=3 uid="uid://b3caitg7qtuo5"]
 
-[ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
-[ext_resource type="PackedScene" path="res://pine_tree.tscn" id="2_o1svp"]
-[ext_resource type="PackedScene" uid="uid://b5cj52i1ijces" path="res://word.tscn" id="4_hx387"]
+[ext_resource type="PackedScene" uid="uid://c7vir5kg45yoc" path="res://pine_tree.tscn" id="2_o1svp"]
+[ext_resource type="Script" path="res://game_manager.gd" id="4_iy823"]
+[ext_resource type="Script" path="res://word_collected.gd" id="5_hq66n"]
 
 [sub_resource type="Curve2D" id="Curve2D_e7uqj"]
 _data = {
@@ -73,6 +74,10 @@ position = Vector2(433, 657)
 wait_time = 0.3
 autostart = true
 
+[node name="GameManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_iy823")
+
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 visible = false
@@ -103,6 +108,16 @@ text = "Game Over"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
+[node name="WordsCollected" type="Label" parent="CanvasLayer2"]
+offset_left = 66.0
+offset_top = 945.0
+offset_right = 512.0
+offset_bottom = 1028.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Zebrane Słowa!"
+script = ExtResource("5_hq66n")
+
 [node name="Time" type="Label" parent="CanvasLayer2"]
 offset_left = 1.0
 offset_top = 18.0
@@ -119,8 +134,6 @@ offset_bottom = 93.0
 text = "Kills"
 label_settings = SubResource("LabelSettings_50tnj")
 
-[node name="word" parent="." instance=ExtResource("4_hx387")]
-position = Vector2(165, 174)
-
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="word_collected" from="GameManager" to="CanvasLayer2/WordsCollected" method="_on_game_manager_word_collected"]

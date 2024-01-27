@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 signal health_depleted
 var collected_words = 0
 var health = 100
@@ -21,4 +23,5 @@ func _physics_process(delta):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+			
 

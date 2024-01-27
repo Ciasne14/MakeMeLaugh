@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://bpb1h7cm4yapj"]
+[gd_scene load_steps=2 format=3 uid="uid://bpb1h7cm4yapj"]
+
+[ext_resource type="PackedScene" uid="uid://b8rvjca0dvmq6" path="res://components/word.tscn" id="1_8i12c"]
 
 [node name="Gameplay" type="Node2D"]
+
+[node name="Word" parent="." instance=ExtResource("1_8i12c")]

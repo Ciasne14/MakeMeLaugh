@@ -78,11 +78,7 @@ config/name="Your First 2D Game With Godot 4: START (GDQuest)"
 run/main_scene="res://survivors_game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
-
-[autoload]
-
-Game="*res://Global/game.gd"
-Utlis="*res://Global/Utlis.gd"
+<<<<<<<Updatedupstreamconfig/icon="res://icon.png"
 
 [display]
 
