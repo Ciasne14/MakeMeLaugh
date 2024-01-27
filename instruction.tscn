@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg58gf3ypjeyr"]
+
+[ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_7wls3"]
+[ext_resource type="VideoStream" path="res://gooey.ogv" id="1_431tg"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="2_13ec6"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(958.5, 544)
+scale = Vector2(0.969192, 1)
+texture = ExtResource("1_7wls3")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -667.0
+offset_top = -362.0
+offset_right = 133.0
+offset_bottom = 118.0
+stream = ExtResource("1_431tg")
+autoplay = true
+
+[node name="MainMenu" type="Button" parent="."]
+offset_left = -73.0
+offset_top = 314.0
+offset_right = 903.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 50
+text = "Menu główne"
+script = ExtResource("2_13ec6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 227.509
+offset_top = -237.0
+offset_right = 973.509
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 50
+text = "W - góra
+S - dół
+A - lewo
+D - prawo
+Sztrzela samo
+Kalambury drag&drop myszką, 
+żeby ułożyć żart"

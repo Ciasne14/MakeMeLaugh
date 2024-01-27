@@ -1,3 +1,61 @@
-[gd_scene format=3 uid="uid://dshocbl1sk1g"]
+[gd_scene load_steps=4 format=3 uid="uid://dshocbl1sk1g"]
+
+[ext_resource type="Script" path="res://Exit.gd" id="1_akdvd"]
+[ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_o37gd"]
+[ext_resource type="Script" path="res://Instruction.gd" id="2_pg2mx"]
 
 [node name="MainManu" type="Node2D"]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+position = Vector2(1290, 668.5)
+scale = Vector2(1.30404, 1.23796)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(-242.324, -93.2984)
+scale = Vector2(0.755228, 0.827225)
+texture = ExtResource("1_o37gd")
+
+[node name="NewGame" type="Button" parent="."]
+offset_left = 956.0
+offset_top = 76.0
+offset_right = 1820.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 50
+text = "Odpalaj"
+
+[node name="Instruction" type="Button" parent="."]
+offset_left = 956.0
+offset_top = 319.0
+offset_right = 1820.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 50
+text = "Instrukcja"
+script = ExtResource("2_pg2mx")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 956.0
+offset_top = 808.0
+offset_right = 1820.0
+offset_bottom = 920.0
+theme_override_font_sizes/font_size = 50
+text = "Wyłącz to xD"
+script = ExtResource("1_akdvd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 9.0
+offset_top = -4.0
+offset_right = 1221.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.113725, 0, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Wszystkich nie obrazimy, ale warto próbować. 
+
+Bez puenty, lekki monty python, możliwe memeski 
+i inne poślinione rzeczy
+
+Gra zawiera treści nieodpowiednie dla dzieci 
+i kontrowersyjne skróty myślowe.
+Jeżeli jest to dla Ciebie problem, zrezygnuj z grania"
+vertical_alignment = 1
