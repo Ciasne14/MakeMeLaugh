@@ -115,7 +115,7 @@ offset_right = 512.0
 offset_bottom = 1028.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "Zebrane Słowa!"
+text = "Zebrane frazy: 0/"
 script = ExtResource("5_hq66n")
 
 [node name="Time" type="Label" parent="CanvasLayer2"]
