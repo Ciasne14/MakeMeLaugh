@@ -75,13 +75,15 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="Odpalaj!"
-run/main_scene="res://survivors_game.tscn"
+run/main_scene="res://main_manu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
 <<<<<<<Updatedupstreamconfig/icon="res://icon.png"
 
 [autoload]
 
+Game="*res://Global/game.gd"
+Utlis="*res://Global/Utlis.gd"
 GlobalStatee="*res://global_state.gd"
 
 [display]

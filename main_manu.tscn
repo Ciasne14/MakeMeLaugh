@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dshocbl1sk1g"]
+[gd_scene load_steps=5 format=3 uid="uid://dshocbl1sk1g"]
 
 [ext_resource type="Script" path="res://Exit.gd" id="1_akdvd"]
 [ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_o37gd"]
+[ext_resource type="Script" path="res://NewGame.gd" id="2_10o6r"]
 [ext_resource type="Script" path="res://Instruction.gd" id="2_pg2mx"]
 
 [node name="MainManu" type="Node2D"]
@@ -22,6 +23,7 @@ offset_right = 1820.0
 offset_bottom = 188.0
 theme_override_font_sizes/font_size = 50
 text = "Odpalaj"
+script = ExtResource("2_10o6r")
 
 [node name="Instruction" type="Button" parent="."]
 offset_left = 956.0
