@@ -9,13 +9,9 @@ var label: String
 
 var dropped_on_target: bool = false
 
-func _read() -> void:
+func _ready() -> void:
 	#add_to_group("DRAGGABLE")
 	%Label.text = label
-
-func set_text(text: String) -> void:
-	label = text
-	%Label.text = text
 	
 #func _get_drag_data(_position: Vector2):
 	#print("[DraggableWord] get_drag_data has run")
@@ -47,4 +43,5 @@ func set_text(text: String) -> void:
 
 func _on_gui_input(event: InputEvent):
 	if event.is_action_pressed("mouse_clicked"):
+		print("CLICKED")
 		word_clicked.emit(self)

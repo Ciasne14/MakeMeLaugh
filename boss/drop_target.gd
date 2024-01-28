@@ -27,7 +27,7 @@ func word_clicked(data: DraggableWord) -> void:
 
 	var draggable_copy: DraggableWord = draggable.instantiate()
 	draggable_copy.id = data.id
-	draggable_copy.set_text(data.label)
+	draggable_copy.label = data.label
 	draggable_copy.dropped_on_target = true # diable furhter dragging
 	%TargetContainer.add_child(draggable_copy)
 

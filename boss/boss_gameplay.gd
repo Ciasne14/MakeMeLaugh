@@ -16,7 +16,7 @@ func _populate_dragables():
 	for index in range(global_state.current_words.size()):
 		var drag_item = draggable_scene.instantiate()
 		drag_item.id = index
-		drag_item.set_text(global_state.current_words[index])
+		drag_item.label = global_state.current_words[index]
 		drag_item.word_clicked.connect(_on_drag_item_clicked)
 		words_created.push_back(drag_item)
 	words_created.shuffle()
@@ -37,6 +37,7 @@ func _on_drag_item_clicked(dropped_item: DraggableWord) -> void:
 	if dropped_item.id == 0 && matched_words.size() == 0:
 		global_state.points += 20
 		_move_word(dropped_item)
+		return
 	var last_matched_word = matched_words.back()
 	if last_matched_word == null || last_matched_word["id"] + 1 != dropped_item.id:
 		global_state.points -= 5
