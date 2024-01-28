@@ -43,5 +43,4 @@ func _ready() -> void:
 
 func _on_gui_input(event: InputEvent):
 	if event.is_action_pressed("mouse_clicked"):
-		print("CLICKED")
 		word_clicked.emit(self)

@@ -1,7 +1,13 @@
 extends PanelContainer
 
+@onready var global_state: GlobalState = get_node("/root/GlobalStatee")
 
-func _on_button_2_pressed():
-	#%LootLocker._change_player_name("bob")
-	#%LootLocker._upload_score(300)
-	%LootLocker._get_leaderboards()
+func _ready():
+	if global_state.is_leaderboard_from_main_menu:
+		%Spacer.visible = true
+		%AgainBtn.visible = false
+	else:
+		%Spacer.visible = false
+		%AgainBtn.visible = true
+	global_state.is_leaderboard_from_main_menu = true
+

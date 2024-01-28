@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brxer44urqy0h"]
+[gd_scene load_steps=5 format=3 uid="uid://bunsplgf8clre"]
 
 [ext_resource type="Script" path="res://summary.gd" id="1_iamdf"]
-[ext_resource type="Script" path="res://NewGame.gd" id="2_6rv8q"]
 [ext_resource type="Script" path="res://MainMenu.gd" id="3_f45q7"]
+[ext_resource type="Script" path="res://leaderboard_btn.gd" id="4_b2m4c"]
 [ext_resource type="AudioStream" uid="uid://depw2fxj3fdny" path="res://Images/grand-final-orchestral-tutti-9927.mp3" id="4_nkxlt"]
 
 [node name="Summary" type="PanelContainer"]
@@ -11,44 +11,77 @@ offset_bottom = 1080.0
 size_flags_vertical = 4
 script = ExtResource("1_iamdf")
 
-[node name="Label" type="Label" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nkxlt")
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "
 Gratulujemy, zakończyłeś niesamowitą, uwłaczającą, kontrowersyjną 
 przygodę w swoim życiu, przygodę, która doporawdziła do uzyskania:"
+horizontal_alignment = 1
 
-[node name="Points" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Points" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "Punkty: 100
 "
 
-[node name="NewGame" type="Button" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 30
-text = "
-Mam jeszcze z osłem
-Odpalaj!
-(nowa gra)
- "
-script = ExtResource("2_6rv8q")
+theme_override_constants/margin_top = 30
 
-[node name="MainMenu" type="Button" parent="."]
+[node name="PlayerName" type="LineEdit" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+placeholder_text = "wpisz nazwę użytkownika"
+alignment = 1
+max_length = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MainMenu" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 85)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
-text = "
-Główne menu
- "
+text = "Menu Główne"
 script = ExtResource("3_f45q7")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_nkxlt")
-autoplay = true
+[node name="LeaderboardBtn" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 85)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "Ranking"
+script = ExtResource("4_b2m4c")
+
+[connection signal="text_submitted" from="VBoxContainer/VBoxContainer/PlayerName" to="." method="_on_player_name_text_submitted"]

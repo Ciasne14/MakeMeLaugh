@@ -98,11 +98,13 @@ func _on_authentication_request_completed(result, response_code, headers, body):
 	auth_http.queue_free()
 	
 	if global_state.player_name != "":
+		print("Updating player name to ", global_state.player_name)
 		_change_player_name(global_state.player_name)
 		return
 	
+	print("Getting leaderboards ", global_state.player_name, " ", global_state.points)
 	# Get leaderboards
-	_get_leaderboards()
+	_upload_score(global_state.points)
 
 
 func _get_leaderboards():

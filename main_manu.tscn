@@ -1,53 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://dshocbl1sk1g"]
+[gd_scene load_steps=6 format=3 uid="uid://dshocbl1sk1g"]
 
 [ext_resource type="Script" path="res://Exit.gd" id="1_akdvd"]
 [ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_o37gd"]
 [ext_resource type="Script" path="res://NewGame.gd" id="2_10o6r"]
 [ext_resource type="Script" path="res://Instruction.gd" id="2_pg2mx"]
+[ext_resource type="Script" path="res://leaderboard_btn.gd" id="4_qq7am"]
 
-[node name="MainManu" type="Node2D"]
+[node name="MainManu" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-position = Vector2(1290, 668.5)
-scale = Vector2(1.30404, 1.23796)
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(-242.324, -93.2984)
-scale = Vector2(0.755228, 0.827225)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(974, 553)
+scale = Vector2(0.984847, 1.02407)
 texture = ExtResource("1_o37gd")
 
-[node name="NewGame" type="Button" parent="."]
-offset_left = 956.0
-offset_top = 76.0
-offset_right = 1820.0
-offset_bottom = 188.0
-theme_override_font_sizes/font_size = 50
-text = "Odpalaj"
-script = ExtResource("2_10o6r")
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
 
-[node name="Instruction" type="Button" parent="."]
-offset_left = 956.0
-offset_top = 319.0
-offset_right = 1820.0
-offset_bottom = 431.0
-theme_override_font_sizes/font_size = 50
-text = "Instrukcja"
-script = ExtResource("2_pg2mx")
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 30
 
-[node name="Exit" type="Button" parent="."]
-offset_left = 956.0
-offset_top = 808.0
-offset_right = 1820.0
-offset_bottom = 920.0
-theme_override_font_sizes/font_size = 50
-text = "Wyłącz to xD"
-script = ExtResource("1_akdvd")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 9.0
-offset_top = -4.0
-offset_right = 1221.0
-offset_bottom = 377.0
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.113725, 0, 0.964706, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -61,3 +45,53 @@ Gra zawiera treści nieodpowiednie dla dzieci
 i kontrowersyjne skróty myślowe.
 Jeżeli jest to dla Ciebie problem, zrezygnuj z grania"
 vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 120
+
+[node name="NewGame" type="Button" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Odpalaj!"
+script = ExtResource("2_10o6r")
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Instruction" type="Button" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Instrukcja"
+script = ExtResource("2_pg2mx")
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Leaderboard" type="Button" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Ranking"
+script = ExtResource("4_qq7am")
+
+[node name="Exit" type="Button" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 50
+text = "Wyłącz to xD"
+script = ExtResource("1_akdvd")

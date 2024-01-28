@@ -19,6 +19,8 @@ var collected_wrods: Array = []
 var points: int = 0
 var player_name: String = ""
 
+var is_leaderboard_from_main_menu = true
+
 func _ready():
 	current_joke = jokes.pick_random()
 	current_joke = current_joke.trim_prefix(" ").trim_suffix(" ")
