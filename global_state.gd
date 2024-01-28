@@ -6,7 +6,7 @@ var jokes: Array = [
 	"""Dlaczego dzieci z Czarnobyla są mądre? Bo co dwie głowy to nie jedna.""",
 	"""Jak poznać prawdziwego programistę? Wiesza się razem ze swoim programem""",
 	"""Dlaczego Ania nie płakała jak spadła z roweru? Bo kierownica jej płuco przebiła.""",
-	"""Co zrobić żeby dzieci w afryce głodne nie chodziły? Poobcinać im nogi!""",
+	"""Co zrobić żeby dzieci w afryce nie chodziły głodne? Poobcinać im nogi!""",
 	"""Co robią babcia z dziadkiem na plaży? przygotowują się do leżenia w piachu"""
 ]
 
