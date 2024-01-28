@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8rrkv0nv07ev"]
+[gd_scene load_steps=8 format=3 uid="uid://cb4y5xwwwla8k"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_n44hs"]
 [ext_resource type="Script" path="res://player.gd" id="1_tnqij"]
-[ext_resource type="PackedScene" uid="uid://dymmj6pcet2s1" path="res://gun.tscn" id="3_8u8xm"]
+[ext_resource type="PackedScene" path="res://gun.tscn" id="3_8u8xm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7udc"]
 radius = 34.0588
@@ -50,9 +50,9 @@ debug_color = Color(0.92549, 0.952941, 0.815686, 0.419608)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -272.0
+offset_left = -128.0
 offset_top = -206.0
-offset_right = 271.0
+offset_right = 127.0
 offset_bottom = -179.0
 theme_override_styles/background = SubResource("StyleBoxFlat_3vvkr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7hs45")

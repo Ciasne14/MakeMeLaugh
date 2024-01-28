@@ -4,7 +4,7 @@ signal leaderboard_received(leaderboard: Dictionary)
 
 # Use this game API key if you want to test it with a functioning leaderboard
 # "987dbd0b9e5eb3749072acc47a210996eea9feb0"
-var game_API_key = "dev_385a81eb7d404f56b512fafccdd3d694"
+var game_API_key = "prod_53bc1c2f8b6e4eccaa2996e7bfa71413"
 var development_mode = true
 var leaderboard_key = "main"
 var session_token = ""
@@ -60,11 +60,11 @@ func _authentication_request():
 		player_session_exists = true
 		
 	## Convert data to json string:
-	var data = { "game_key": game_API_key, "game_version": "0.0.1", "development_mode": true }
+	var data = { "game_key": game_API_key, "game_version": "0.0.1", "development_mode": false }
 	
 	# If a player session already exists, send with the player identifier
 	if(player_session_exists == true):
-		data = { "game_key": game_API_key, "player_identifier":player_identifier, "game_version": "0.0.1", "development_mode": true }
+		data = { "game_key": game_API_key, "player_identifier":player_identifier, "game_version": "0.0.1", "development_mode": false }
 	
 	# Add 'Content-Type' header:
 	var headers = ["Content-Type: application/json"]
