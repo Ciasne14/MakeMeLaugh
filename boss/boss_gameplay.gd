@@ -9,11 +9,7 @@ var matched_words: Array = []
 
 func _ready() -> void:
 	_populate_dragables()
-<<<<<<< Updated upstream
 	%Points.text = "Punkty: " + str(global_state.points)
-=======
-	#$Points.text = "Punkty: " + str(global_state.points)
->>>>>>> Stashed changes
 
 func _populate_dragables():
 	var words_created: Array = []
@@ -47,13 +43,8 @@ func _on_drag_item_clicked(dropped_item: DraggableWord) -> void:
 	else:
 		global_state.points += 20
 		_move_word(dropped_item)
-<<<<<<< Updated upstream
 	print("Points ", str(global_state.points))
 	%Points.text = "Punkty: " + str(global_state.points)
-=======
-	print("Points", str(global_state.points))
-	#$Points.text = "Punkty: " + str(global_state.points)
->>>>>>> Stashed changes
 	
 
 func _move_word(item: DraggableWord) -> void:
