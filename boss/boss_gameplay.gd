@@ -7,17 +7,9 @@ extends PanelContainer
 
 var matched_words: Array = []
 
-var czernobyl = preload("res://czernobyl.jpg")
-var rowerek = preload("res://rowerek.jpg")
-var wiesza = preload("res://wiesza.jpg")
-
 func _ready() -> void:
 	_populate_dragables()
-	$Points.text = "Punkty: " + str(global_state.points)
-	
-			
-		
-
+	%Points.text = "Punkty: " + str(global_state.points)
 
 func _populate_dragables():
 	var words_created: Array = []
@@ -51,8 +43,8 @@ func _on_drag_item_clicked(dropped_item: DraggableWord) -> void:
 	else:
 		global_state.points += 20
 		_move_word(dropped_item)
-	print("Points", str(global_state.points))
-	$Points.text = "Punkty: " + str(global_state.points)
+	print("Points ", str(global_state.points))
+	%Points.text = "Punkty: " + str(global_state.points)
 	
 
 func _move_word(item: DraggableWord) -> void:
