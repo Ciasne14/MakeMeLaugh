@@ -7,9 +7,20 @@ extends PanelContainer
 
 var matched_words: Array = []
 
+@onready var czernobyl = preload("res://czernobyl.jpg")
+@onready var rowerek = preload("res://rowerek.jpg")
+@onready var wiesza = preload("res://wiesza.jpg")
+
+
 func _ready() -> void:
 	_populate_dragables()
 	%Points.text = "Punkty: " + str(global_state.points)
+	if(global_state.current_words[1]=="dzieci"):
+		$VBoxContainer/SomeImage/jokeBackground.texture = czernobyl
+	if(global_state.current_words[1]=="poznać"):
+		$VBoxContainer/SomeImage/jokeBackground.texture = wiesza
+	if(global_state.current_words[1]=="Ania"):
+		$VBoxContainer/SomeImage/jokeBackground.texture = rowerek
 
 func _populate_dragables():
 	var words_created: Array = []

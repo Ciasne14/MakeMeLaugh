@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b68w3mer4vgrl"]
+[gd_scene load_steps=4 format=3 uid="uid://b68w3mer4vgrl"]
 
 [ext_resource type="Script" path="res://boss/boss_gameplay.gd" id="1_1c0ku"]
+[ext_resource type="Texture2D" uid="uid://bb6eum1f2kbd2" path="res://czernobyl.jpg" id="2_7ujab"]
 [ext_resource type="Script" path="res://boss/drop_target.gd" id="3_0abfq"]
 
 [node name="BossGameplay" type="PanelContainer"]
@@ -31,6 +32,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.61
+
+[node name="jokeBackground" type="Sprite2D" parent="VBoxContainer/SomeImage"]
+position = Vector2(966, 509)
+texture = ExtResource("2_7ujab")
 
 [node name="PickWords" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
