@@ -10,7 +10,8 @@ var matched_words: Array = []
 @onready var czernobyl = preload("res://czernobyl.jpg")
 @onready var rowerek = preload("res://rowerek.jpg")
 @onready var wiesza = preload("res://wiesza.jpg")
-
+@onready var dziadek = preload("res://dziadek.jpg")
+@onready var nogi = preload("res://nogi.jpg")
 
 func _ready() -> void:
 	_populate_dragables()
@@ -21,6 +22,10 @@ func _ready() -> void:
 		$VBoxContainer/SomeImage/jokeBackground.texture = wiesza
 	if global_state.current_words[1] == "Ania":
 		$VBoxContainer/SomeImage/jokeBackground.texture = rowerek
+	if global_state.current_words[1] == "robią":
+		$VBoxContainer/SomeImage/jokeBackground.texture = dziadek
+	if global_state.current_words[1] == "zrobić":
+		$VBoxContainer/SomeImage/jokeBackground.texture = nogi
 
 func _populate_dragables():
 	var words_created: Array = []

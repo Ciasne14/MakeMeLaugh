@@ -23,6 +23,7 @@ shape = SubResource("CircleShape2D_ngya6")
 
 [node name="AjWaj" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_kpxb5")
+volume_db = 14.991
 autoplay = true
 
 [node name="Puff" type="AudioStreamPlayer2D" parent="."]

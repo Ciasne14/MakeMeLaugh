@@ -5,7 +5,9 @@ class_name GlobalState
 var jokes: Array = [
 	"""Dlaczego dzieci z Czarnobyla są mądre? Bo co dwie głowy to nie jedna.""",
 	"""Jak poznać prawdziwego programistę? Wiesza się razem ze swoim programem""",
-	"""Dlaczego Ania nie płakała jak spadła z roweru? Bo kierownica jej płuco przebiła."""
+	"""Dlaczego Ania nie płakała jak spadła z roweru? Bo kierownica jej płuco przebiła.""",
+	"""Co zrobić żeby dzieci w afryce głodne nie chodziły? Poobcinać im nogi!""",
+	"""Co robią babcia z dziadkiem na plaży? przygotowują się do leżenia w piachu"""
 ]
 
 var current_joke: String = ""
