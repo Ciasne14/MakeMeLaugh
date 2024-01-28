@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://nyyi0s7057eo"]
+
+[ext_resource type="AudioStream" uid="uid://52d2p6aqi0l2" path="res://epic-cinematic-drama_54sec-187364.mp3" id="1_jhudt"]
+
+[node name="BackgroundMusic" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jhudt")
+volume_db = -18.739
+autoplay = true
