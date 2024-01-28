@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg58gf3ypjeyr"]
+[gd_scene load_steps=5 format=3 uid="uid://bg58gf3ypjeyr"]
 
 [ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_7wls3"]
 [ext_resource type="VideoStream" path="res://gooey.ogv" id="1_431tg"]
 [ext_resource type="Script" path="res://MainMenu.gd" id="2_13ec6"]
+[ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="4_pesbb"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(958.5, 544)
@@ -27,10 +28,11 @@ text = "Menu główne"
 script = ExtResource("2_13ec6")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 227.509
-offset_top = -237.0
-offset_right = 973.509
-offset_bottom = 310.0
+offset_left = 194.492
+offset_top = -503.0
+offset_right = 940.492
+offset_bottom = 44.0
+pivot_offset = Vector2(358.03, 410)
 theme_override_font_sizes/font_size = 50
 text = "W - góra
 S - dół
@@ -39,3 +41,19 @@ D - prawo
 Sztrzela samo
 Kalambury drag&drop myszką, 
 żeby ułożyć żart"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -721.735
+offset_top = 167.0
+offset_right = 900.265
+offset_bottom = 668.0
+pivot_offset = Vector2(358.03, 410)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Strzelaj do przeciwników i zbierz wszystkie słowa. 
+Następnie ułóż słowa w odpowiedniej kolejności, aby utoworzyć żart"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_pesbb")
