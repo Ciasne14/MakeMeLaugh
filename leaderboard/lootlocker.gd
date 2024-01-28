@@ -47,12 +47,13 @@ func _authentication_request():
 	# Check if a player session exists
 	var player_session_exists = false
 	var player_identifier : String
-	var file = FileAccess.open("user://LootLocker.data", FileAccess.READ)
-	if file != null:
-		player_identifier = file.get_as_text()
-		print("player ID="+player_identifier)
-		file.close()
- 
+	#var file = FileAccess.open("user://LootLocker.data", FileAccess.READ)
+	var file = null
+	#if file != null:
+		#player_identifier = file.get_as_text()
+		#print("player ID="+player_identifier)
+		#file.close()
+ #
 	if player_identifier != null and player_identifier.length() > 1:
 		print("player session exists, id="+player_identifier)
 		player_session_exists = true
