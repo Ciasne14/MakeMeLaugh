@@ -1,9 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://b3caitg7qtuo5"]
 
-[ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
 [ext_resource type="PackedScene" uid="uid://c7vir5kg45yoc" path="res://pine_tree.tscn" id="2_o1svp"]
 [ext_resource type="Script" path="res://game_manager.gd" id="4_iy823"]
+[ext_resource type="Script" path="res://NewGame.gd" id="5_4kwwl"]
 [ext_resource type="Script" path="res://word_collected.gd" id="5_hq66n"]
 [ext_resource type="Texture2D" uid="uid://c0bfhyn3iy64i" path="res://Screenshot 2024-01-28 101425.png" id="6_k6f72"]
 
@@ -4274,6 +4275,39 @@ position = Vector2(-2615, 3978)
 [node name="PineTree2" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(595, 219)
 
+[node name="PineTree10" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(-17, -429)
+
+[node name="PineTree11" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(2553, -125)
+
+[node name="PineTree12" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(2259, 1089)
+
+[node name="PineTree13" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1001, 1911)
+
+[node name="PineTree14" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(-669, 1095)
+
+[node name="PineTree15" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(-391, 237)
+
+[node name="PineTree16" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(-193, 2299)
+
+[node name="PineTree17" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(2525, 2399)
+
+[node name="PineTree18" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(3019, 753)
+
+[node name="PineTree19" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(3271, 1771)
+
+[node name="PineTree20" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(3569, 77)
+
 [node name="PineTree3" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1306, 823)
 
@@ -4281,7 +4315,16 @@ position = Vector2(1306, 823)
 position = Vector2(1434, 267)
 
 [node name="PineTree5" parent="." instance=ExtResource("2_o1svp")]
-position = Vector2(1503, 302)
+position = Vector2(1429, -442)
+
+[node name="PineTree21" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(1749, 12)
+
+[node name="PineTree22" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(2433, 628)
+
+[node name="PineTree23" parent="." instance=ExtResource("2_o1svp")]
+position = Vector2(709, 1386)
 
 [node name="PineTree6" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1402, 369)
@@ -4520,20 +4563,40 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.247059)
 
 [node name="Label" type="Label" parent="GameOver/ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -11.5
-offset_right = 43.5
-offset_bottom = 11.5
+layout_mode = 2
+offset_left = 553.0
+offset_top = 375.0
+offset_right = 1366.0
+offset_bottom = 580.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme_override_font_sizes/font_size = 150
 text = "Game Over"
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -120.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 40
+
+[node name="Odpalaj!" type="Button" parent="GameOver/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Odpalaj!"
+script = ExtResource("5_4kwwl")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

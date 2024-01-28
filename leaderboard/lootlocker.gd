@@ -148,6 +148,7 @@ func _on_leaderboard_request_completed(result, response_code, headers, body):
 	_leaderboard_update(json.get_data()['items'])
 	
 func _leaderboard_update(data: Array):
+	%Spinner.queue_free()
 	for record in data:
 		var entry = LEADERBOARD_ENTRY_SCENE.instantiate()
 		entry.player_name = record["player"]["name"]

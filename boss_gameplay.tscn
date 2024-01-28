@@ -12,19 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1c0ku")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-
-[node name="Points" type="Label" parent="MarginContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "Punkty: "
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
@@ -36,6 +23,21 @@ size_flags_stretch_ratio = 2.61
 [node name="jokeBackground" type="Sprite2D" parent="VBoxContainer/SomeImage"]
 position = Vector2(966, 509)
 texture = ExtResource("2_7ujab")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/SomeImage"]
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="Points" type="Label" parent="VBoxContainer/SomeImage/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Punkty: "
 
 [node name="PickWords" type="Panel" parent="VBoxContainer"]
 layout_mode = 2

@@ -3,6 +3,11 @@ extends Node2D
 
 @onready var global_state: GlobalState = get_node("/root/GlobalStatee")
 
+func _input(event: InputEvent):
+	if event.is_action_pressed("escape"):
+		global_state._ready()
+		get_tree().change_scene_to_file("res://main_manu.tscn")
+
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
 	var new_mob_dziecko = preload("res://mob_dziecko.tscn").instantiate()

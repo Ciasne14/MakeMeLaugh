@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3dhqp6anafch" path="res://420109801_359785370149251_1381973428609379947_n.jpg" id="1_o37gd"]
 [ext_resource type="Script" path="res://NewGame.gd" id="2_10o6r"]
 [ext_resource type="Script" path="res://Instruction.gd" id="2_pg2mx"]
-[ext_resource type="Script" path="res://leaderboard_btn.gd" id="4_qq7am"]
+[ext_resource type="Script" path="res://main_menu_leaderboard_btn.gd" id="4_777qp"]
 [ext_resource type="AudioStream" uid="uid://jjdm5cs3dgv0" path="res://click.mp3" id="6_7d0ik"]
 
 [node name="MainManu" type="PanelContainer"]
@@ -93,7 +93,7 @@ custom_minimum_size = Vector2(2.08165e-12, 120)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Ranking"
-script = ExtResource("4_qq7am")
+script = ExtResource("4_777qp")
 
 [node name="Exit" type="Button" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
