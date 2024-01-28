@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cf1pq7cdxxkio"
+path="res://.godot/imported/aj waj.mp3-c604b8f3263d12d59b87017479f05c55.mp3str"
+
+[deps]
+
+source_file="res://characters/feministka/aj waj.mp3"
+dest_files=["res://.godot/imported/aj waj.mp3-c604b8f3263d12d59b87017479f05c55.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

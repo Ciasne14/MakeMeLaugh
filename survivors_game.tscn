@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
-[ext_resource type="PackedScene" path="res://pine_tree.tscn" id="2_o1svp"]
+[ext_resource type="PackedScene" uid="uid://c7vir5kg45yoc" path="res://pine_tree.tscn" id="2_o1svp"]
 [ext_resource type="Script" path="res://game_manager.gd" id="4_iy823"]
 [ext_resource type="Script" path="res://word_collected.gd" id="5_hq66n"]
 

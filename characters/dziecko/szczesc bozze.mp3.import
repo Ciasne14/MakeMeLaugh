@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://45cbfux50ano"
+path="res://.godot/imported/szczesc bozze.mp3-6411e25d5ca0b0b4f0fc7d6e5723d59a.mp3str"
+
+[deps]
+
+source_file="res://characters/dziecko/szczesc bozze.mp3"
+dest_files=["res://.godot/imported/szczesc bozze.mp3-6411e25d5ca0b0b4f0fc7d6e5723d59a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
