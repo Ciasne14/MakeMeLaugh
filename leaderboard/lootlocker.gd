@@ -25,22 +25,22 @@ func _ready():
 	_authentication_request()
 	#_get_leaderboards()
 
-func _process(_delta):
-	if(Input.is_action_just_pressed("ui_up")):
-		score += 1
-		print("CurrentScore:"+str(score))
-	
-	if(Input.is_action_just_pressed("ui_down")):
-		score -= 1
-		print("CurrentScore:"+str(score))
-	
-	# Upload score when pressing enter
-	if(Input.is_action_just_pressed("ui_accept")):
-		_get_player_name()
-	
-	# Get score when pressing spacebar
-	if(Input.is_action_just_pressed("ui_select")):
-		_change_player_name("new_player")
+#func _process(_delta):
+	#if(Input.is_action_just_pressed("ui_up")):
+		#score += 1
+		#print("CurrentScore:"+str(score))
+	#
+	#if(Input.is_action_just_pressed("ui_down")):
+		#score -= 1
+		#print("CurrentScore:"+str(score))
+	#
+	## Upload score when pressing enter
+	#if(Input.is_action_just_pressed("ui_accept")):
+		#_get_player_name()
+	#
+	## Get score when pressing spacebar
+	#if(Input.is_action_just_pressed("ui_select")):
+		#_change_player_name("new_player")
 
 
 func _authentication_request():
