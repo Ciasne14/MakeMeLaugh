@@ -34,8 +34,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.113725, 0, 0.964706, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 5
 theme_override_font_sizes/font_size = 32
 text = "Wszystkich nie obrazimy, ale warto próbować. 
 
@@ -44,7 +45,11 @@ i inne poślinione rzeczy
 
 Gra zawiera treści nieodpowiednie dla dzieci 
 i kontrowersyjne skróty myślowe.
-Jeżeli jest to dla Ciebie problem, zrezygnuj z grania"
+Jeżeli jest to dla Ciebie problem, zrezygnuj z grania
+
+Kontrowersja bawi wszystkich, tylko się nie przyznają,
+
+Śmiechłeś to punkcik :D"
 vertical_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
