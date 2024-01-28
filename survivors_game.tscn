@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3caitg7qtuo5"]
+[gd_scene load_steps=9 format=3 uid="uid://b3caitg7qtuo5"]
 
-[ext_resource type="PackedScene" path="res://player.tscn" id="1_kwr4t"]
+[ext_resource type="PackedScene" uid="uid://c8rrkv0nv07ev" path="res://player.tscn" id="1_kwr4t"]
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_nficl"]
 [ext_resource type="PackedScene" uid="uid://c7vir5kg45yoc" path="res://pine_tree.tscn" id="2_o1svp"]
 [ext_resource type="Script" path="res://game_manager.gd" id="4_iy823"]
@@ -4275,37 +4275,37 @@ position = Vector2(-2615, 3978)
 [node name="PineTree2" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(595, 219)
 
-[node name="PineTree10" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree649" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-17, -429)
 
-[node name="PineTree11" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree650" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(2553, -125)
 
-[node name="PineTree12" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree651" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(2259, 1089)
 
-[node name="PineTree13" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree652" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1001, 1911)
 
-[node name="PineTree14" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree653" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-669, 1095)
 
-[node name="PineTree15" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree654" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-391, 237)
 
-[node name="PineTree16" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree655" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-193, 2299)
 
-[node name="PineTree17" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree656" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(2525, 2399)
 
-[node name="PineTree18" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree657" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(3019, 753)
 
-[node name="PineTree19" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree658" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(3271, 1771)
 
-[node name="PineTree20" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree659" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(3569, 77)
 
 [node name="PineTree3" parent="." instance=ExtResource("2_o1svp")]
@@ -4317,13 +4317,13 @@ position = Vector2(1434, 267)
 [node name="PineTree5" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1429, -442)
 
-[node name="PineTree21" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree660" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1749, 12)
 
-[node name="PineTree22" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree661" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(2433, 628)
 
-[node name="PineTree23" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree662" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(709, 1386)
 
 [node name="PineTree6" parent="." instance=ExtResource("2_o1svp")]
@@ -4335,208 +4335,208 @@ position = Vector2(1669, 582)
 [node name="PineTree8" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(422, 577)
 
-[node name="PineTree649" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree663" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(595, 219)
 
-[node name="PineTree650" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree664" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1306, 823)
 
-[node name="PineTree651" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree665" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1434, 267)
 
-[node name="PineTree652" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree666" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1503, 302)
 
-[node name="PineTree656" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree667" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1686, 1346)
 
-[node name="PineTree657" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree668" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1022, 1624)
 
-[node name="PineTree658" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree669" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1643, 1771)
 
-[node name="PineTree659" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree670" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(680, 1432)
 
-[node name="PineTree660" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree671" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(16, 1710)
 
-[node name="PineTree661" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree672" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(637, 1857)
 
-[node name="PineTree662" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree673" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1263, 1848)
 
-[node name="PineTree663" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1337" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(599, 2126)
 
-[node name="PineTree664" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1338" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1220, 2273)
 
-[node name="PineTree665" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1339" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(257, 1934)
 
-[node name="PineTree666" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1340" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-407, 2212)
 
-[node name="PineTree667" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1341" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(214, 2359)
 
-[node name="PineTree668" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1342" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(994, 706)
 
-[node name="PineTree669" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1343" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(330, 984)
 
-[node name="PineTree670" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1344" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(951, 1131)
 
-[node name="PineTree671" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1345" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-12, 792)
 
-[node name="PineTree672" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1346" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2634, 2816)
 
-[node name="PineTree1337" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1347" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2582, 2056)
 
-[node name="PineTree1338" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1348" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2586, 1981)
 
-[node name="PineTree1339" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1349" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2574, 1895)
 
-[node name="PineTree1340" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1350" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2583, 1813)
 
-[node name="PineTree1341" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1351" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2574, 1735)
 
-[node name="PineTree1342" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1352" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2578, 1649)
 
-[node name="PineTree1343" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1353" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2676, 2177)
 
-[node name="PineTree1344" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1354" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2680, 2102)
 
-[node name="PineTree1345" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1355" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2668, 2016)
 
-[node name="PineTree1346" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1356" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2677, 1934)
 
-[node name="PineTree1347" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1357" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2668, 1856)
 
-[node name="PineTree1348" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1358" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2672, 1770)
 
-[node name="PineTree1349" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1359" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2672, 1686)
 
-[node name="PineTree1350" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1360" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2666, 1605)
 
-[node name="PineTree1351" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1361" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2682, 2587)
 
-[node name="PineTree1352" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1362" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2682, 2503)
 
-[node name="PineTree1353" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1363" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2676, 2422)
 
-[node name="PineTree1354" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1364" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2677, 2338)
 
-[node name="PineTree1355" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1365" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2676, 2272)
 
-[node name="PineTree1356" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1366" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2674, 2183)
 
-[node name="PineTree1357" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1367" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2746, 2183)
 
-[node name="PineTree1358" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1368" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2750, 2108)
 
-[node name="PineTree1359" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1369" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2738, 2022)
 
-[node name="PineTree1360" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1370" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2747, 1940)
 
-[node name="PineTree1361" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1371" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2738, 1862)
 
-[node name="PineTree1362" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1372" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2742, 1776)
 
-[node name="PineTree1363" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1373" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2742, 1692)
 
-[node name="PineTree1364" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1374" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2736, 1611)
 
-[node name="PineTree1365" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1375" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2752, 2593)
 
-[node name="PineTree1366" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1376" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2752, 2509)
 
-[node name="PineTree1367" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1377" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2746, 2428)
 
-[node name="PineTree1368" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1378" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2747, 2344)
 
-[node name="PineTree1369" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1379" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2746, 2278)
 
-[node name="PineTree1370" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1488" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2744, 2189)
 
-[node name="PineTree1371" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1489" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2593, 2638)
 
-[node name="PineTree1372" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1490" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2584, 2560)
 
-[node name="PineTree1373" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1491" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2588, 2474)
 
-[node name="PineTree1374" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1492" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2588, 2390)
 
-[node name="PineTree1375" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1493" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2582, 2309)
 
-[node name="PineTree1376" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1494" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2583, 2225)
 
-[node name="PineTree1377" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1495" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2582, 2159)
 
-[node name="PineTree1378" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1496" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2580, 2070)
 
-[node name="PineTree1379" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1497" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-2609, 1731)
 
-[node name="PineTree673" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1498" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(-55, 1217)
 
-[node name="PineTree653" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1499" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1402, 369)
 
-[node name="PineTree654" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1500" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(1669, 582)
 
-[node name="PineTree655" parent="." instance=ExtResource("2_o1svp")]
+[node name="PineTree1501" parent="." instance=ExtResource("2_o1svp")]
 position = Vector2(422, 577)
 
 [node name="PineTree9" parent="." instance=ExtResource("2_o1svp")]
