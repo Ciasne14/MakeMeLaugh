@@ -7,9 +7,17 @@ extends PanelContainer
 
 var matched_words: Array = []
 
+var czernobyl = preload("res://czernobyl.jpg")
+var rowerek = preload("res://rowerek.jpg")
+var wiesza = preload("res://wiesza.jpg")
+
 func _ready() -> void:
 	_populate_dragables()
 	$Points.text = "Punkty: " + str(global_state.points)
+	
+			
+		
+
 
 func _populate_dragables():
 	var words_created: Array = []
